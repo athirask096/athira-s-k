@@ -1,0 +1,50 @@
+{% load static %}<!DOCTYPE html>
+<html>
+<head>
+<title>
+</title>
+<link rel="stylesheet" href="{% static 'css/style3.css' %}">
+<style>
+</style>
+
+</head>
+<body class="b1">
+<div class="navbar">
+<ul>
+<li>Edit
+
+<div class="submenu">
+<ul>
+<li><a href="{% url 'password' %}">Password</a></li>
+<li><a href="{% url 'mobile' %}">Mobile</a></li>
+<li><a href="{% url 'email' %}">Email</a></li>
+</ul>
+</div>
+</li>
+<li><a href="{% url 'logout' %}">Logout</li>
+</ul>
+</div>
+<div class="gal">
+<img src="{% static 'img/orisys2.jpg' %}">
+</div>
+<div class="cont">
+<form>
+{% csrf_token %}
+<li><a href="{% url 'faculty' %}">Faculty registration</a></li>
+<li><a href="{% url 'studentmark' %}">Student mark</a></li> 
+<li><a href="{% url 'studattd' %}">Student attendance</a></li> 
+<li><a href="{% url 'leave' %}">Apply Leave</a></li> 
+<li> <a href="{% url 'stdreg' %}"> Add student</a> </li>
+</div>
+</form>
+</div>
+
+
+
+<div class="ft">
+<footer >
+<p>&copy 2018-2019 company inc.</p>
+</footer>
+</div>
+</body>
+</html>

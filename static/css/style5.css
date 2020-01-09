@@ -1,0 +1,109 @@
+*{
+	margin:0px;
+		padding:0px;
+			box-sizing:border-box;
+}
+.b{
+	background-color:light green;
+	background-size:cover;
+}	
+		
+.menubar{
+		background-color:rgba(0,0,0,0.4);
+				text-align:center;
+}
+.menubar ul{
+		list-style-type:none;
+			display:inline-flex;
+				margin-right:20px;
+}
+.menubar ul li{
+				padding:20px;
+						margin:10px;
+							text-align:center;
+}
+.menubar ul li:hover{
+			background:orange;
+				border-radius:30px;
+					margin-left:10px;
+}
+.menubar ul li:hover a{
+	color:black;
+}
+.menubar ul li a{
+	text-decoration:none;
+	color:white;
+}
+.submenu{
+	display:none;
+}
+.menubar ul li:hover .submenu{
+			display:block;
+				position:absolute;
+					margin-top:15px;
+						margin-left:-15px;
+							background:blue;
+}
+.submenu ul li a{
+	color:blue;
+}
+.menubar ul li:hover .submenu ul{
+	display:block;
+	margin:10px;
+}
+.menubar ul li:hover .submenu ul li{
+			border-bottom:2px solid white;
+				padding:10px;
+					margin:10px;
+}
+.menubar ul li:hover .submenu ul li a{
+	color:white;
+}
+.menubar ul li:hover .submenu ul li:hover a{
+	color:blue;
+}
+.cont{
+		position:relative;
+			width:400px;
+				height:350px;
+					margin:10px;
+						left:400px;
+							float:center;
+									padding:30px;
+										border-radius:20px;
+											background:rgba(0,0,0,0.8);
+											top:50px	
+}
+.frm{
+	width:300px;
+		padding:10px;
+			margin:5px;
+				background-color:white;
+					color:black;
+						outline:none;
+							border:1px solid #5b8084;
+								transition:0.5s;
+								
+}
+.cont h3{
+	text-align:left;	
+	color:white;
+}
+.frm:focus{
+	box-shadow:0px 0px 30px 6px #5b8084;
+}
+.btn{
+	float:center;
+		padding:10px 10px;
+			background:rgba(0,0,0,0.2);
+				outline:none;
+					color:white;
+						border-radius:30px;
+}
+.ft{
+	margin-bottom:50px;
+		background:rgba(0,0,0,0.4);
+			padding:20px;
+				text-align:center;
+					color:black;
+}

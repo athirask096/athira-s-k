@@ -1,0 +1,56 @@
+{% load static %}<!DOCTYPE html>
+<html>
+<head>
+<title></title>
+<link rel="stylesheet" href="{% static 'css/style5.css' %}">
+
+<style>
+table,th,td{border:1px solid black;border-collapse:collapse}
+</style>
+</head>
+<body class="b">
+<div class="menubar">
+<ul>
+<li><a href="view.html">View faculty</a></li>
+</ul>
+</div>
+<div>
+
+                
+            <h1>Faculties</h1>
+            <table>
+                <thead>
+                    <tr>
+                        <th>faculty id</th>
+                        <th>Name</th>
+                        <th>Address</th>
+                        <th>Dob</th>
+                        <th>Gender</th>
+                        <th>Qualification</th>
+                        <th>mobile</th>
+                        <th>email</th>
+                    </tr>
+
+                </thead>
+                <tbody>
+                    {%if authorssss%}
+                    {%for i in authorssss%}
+                    <tr>
+                        <td>{{i.factid}}</td>
+                        <td>{{i.name}}</td>
+                        <td>{{i.address}}</td>
+                        <td>{{i.dob}}</td>
+                        <td>{{i.gender}}</td>
+                        <td>{{i.qualification}}</td>
+                        <td>{{i.mobile}}</td>
+                        <td>{{i.email}}</td>
+                    </tr>
+                    {%endfor %}
+            {%endif %}
+                </tbody>
+            </table>
+
+        </div>
+    </div>
+    </body>
+</html>

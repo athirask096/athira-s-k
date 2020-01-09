@@ -1,0 +1,65 @@
+{% load static %}<!DOCTYPE html>
+<html>
+<head>
+<title></title>
+<link rel="stylesheet" href="{% static 'css/style5.css' %}">
+
+<style>
+table,th,td{border:1px solid black;border-collapse:collapse}
+</style>
+</head>
+<body class="b">
+<div class="menubar">
+<ul>
+<li><a href="view.html">View Student</a></li>
+</ul>
+</div>
+<div>
+
+                
+            <h1>students</h1>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Student id</th>
+                        <th>AdmNo</th>
+                        <th>Name</th>
+                        <th>Address</th>
+                        <th>dob</th>
+                        <th>gender</th>
+                        <th>mobile</th>
+                        <th>Admdate</th>
+                        <th>guardian</th>
+                        <th>batch</th>
+                        <th>email </th>
+                        <th>password</th>
+                    </tr>
+
+                </thead>
+                <tbody>
+                    {%if authorsssss%}
+                    {%for i in authorsssss%}
+                    <tr>
+                        <td>{{i.stdid}}</td>
+                        <td>{{i.admno}}</td>
+                        <td>{{i.name}}</td>
+                        <td>{{i.address}}</td>
+                        <td>{{i.dob}}</td>
+                        <td>{{i.gender}}</td>
+                        <td>{{i.mobile}}</td>
+                        <td>{{i.admdate}}</td>
+                        <td>{{i.guardian}}</td>
+                        <td>{{i.batch}}</td>
+                        <td>{{i.email}}</td>
+                        <td>{{i.password}}</td>
+                    </tr>
+                    {%endfor %}
+            {%endif %}
+                </tbody>
+            </table>
+
+        </div>
+    </div>
+    </body>
+</html>
+        

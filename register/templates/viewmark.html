@@ -1,0 +1,63 @@
+{% load static %}<!DOCTYPE html>
+<html>
+<head>
+<title>
+</title>
+<link rel="stylesheet"href="{% static 'css/style3.css' %}">
+<style>
+table,th,td{border:1px solid black;border-collapse:collapse}
+</style>
+
+</head>
+<body class="b1">
+<div class="navbar">
+<ul>
+
+<li><a href="edit.html">Edit</a>
+
+<div class="submenu">
+<ul>
+<li><a href="{% url 'password'%}">Password</a></li>
+<li><a href="{% url 'mobile'%}">Mobile</a></li>
+<li><a href="{% url 'email'%}">Email</a></li>
+
+</ul>
+</div>
+<li><a href="{% url 'index'%}">Logout</a></li>
+</ul>
+</div>
+<div>
+
+				
+			<h1>Marks</h1>
+			<table>
+				<thead>
+					<tr>
+						<th>AssessmentNo</th>
+						<th>Subject1</th>
+						<th>Subject2</th>
+						<th>Subject3</th>
+                        <th>percentage</th>
+					</tr>
+
+				</thead>
+				<tbody>
+					{%if authorss%}
+					{%for i in authorss%}
+					<tr>
+						<td>{{i.assessmentno}}</td>
+						<td>{{i.sub1mark}}</td>
+						<td>{{i.sub2mark}}</td>
+						<td>{{i.sub3mark}}</td>
+                        <td>{{i.percentage}}</td>
+					</tr>
+					{%endfor %}
+			{%endif %}
+				</tbody>
+			</table>
+
+		</div>
+	</div>
+	</body>
+</html>
+		
